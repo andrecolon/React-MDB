@@ -12,7 +12,7 @@ export const StyledHeroImage = styled.div`
   background-size: 100%, cover !important;
   background-position: center, top !important;
   width: 100%;
-  height: 600px;
+  height: 90vh;
   position: relative;
   animation: animateHeroimage 1s;
 
