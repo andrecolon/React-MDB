@@ -19,6 +19,7 @@ export const useMovieFetch = (movieID) => {
       const directors = creditsResults.crew.filter(
         (member) => member.job === "Director"
       );
+      console.log("Looking for driectors", result, directors.job);
 
       setState({
         ...result,
