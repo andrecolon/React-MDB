@@ -11,7 +11,7 @@ export const useMovieFetch = (movieID) => {
     setLoading(true);
 
     try {
-      const endpoint = `${API_URL}movie/${movieID}?api_key${API_KEY}`;
+      const endpoint = `${API_URL}movie/${movieID}?api_key=${API_KEY}`;
       const result = await (await fetch(endpoint)).json();
       console.log("This is my result", result);
       const creditsEndpoint = `${API_URL}movie/${movieID}/credits?api_key=${API_KEY}`;
@@ -19,7 +19,7 @@ export const useMovieFetch = (movieID) => {
       const directors = creditsResults.crew.filter(
         (member) => member.job === "Director"
       );
-      console.log("Looking for driectors", result, directors.job);
+      console.log("Looking for directors", result, directors.job);
 
       setState({
         ...result,

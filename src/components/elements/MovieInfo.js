@@ -6,7 +6,7 @@ import MovieThumb from "./MovieThumb";
 import { StyledMovieInfo } from "../styles/StyledMovieInfo";
 
 const MovieInfo = ({ movie }) => (
-  <StyledMovieInfo backdrop={movie.backdrop_path}>
+  <StyledMovieInfo image={movie.backdrop_path}>
     <div className="movieinfo-content">
       <div className="movieinfo-thumb">
         <MovieThumb
