@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import NoImage from "../images/no_image.jpg";
-import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
+import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from "../../config";
 import MovieThumb from "./MovieThumb";
 import { StyledMovieInfo } from "../styles/StyledMovieInfo";
+import { heroImage } from "../elements/HeroImage";
 
-const MovieInfo = ({ movie }) => (
-  <StyledMovieInfo image={movie.backdrop_path}>
+const MovieInfo = ({ movie, heroImage }) => (
+  <StyledMovieInfo
+    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}`}
+  >
     <div className="movieinfo-content">
       <div className="movieinfo-thumb">
         <MovieThumb
