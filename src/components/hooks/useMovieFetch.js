@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { API_URL, API_KEY } from "../../config";
 
 export const useMovieFetch = (movieID) => {
-  const [state, setState] = useState({}); //empty state with object
+  const [state, setState] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(true);
 
